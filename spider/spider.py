@@ -26,10 +26,12 @@ class BaiDu_Spider(object):
             for data in selector:
                 title = ''.join(data.xpath('./div/div/h3/a/text()'))
                 link = ''.join(data.xpath('./div/div/h3/a/@href'))
+                source = ''.join(data.xpath('./div/div/div[2]/div/div[2]/div/a/span/text()'))
 
                 item = {
                     'title': title,
                     'link': link,
+                    'source': source,
                 }
                 data_list.append(item)
             flag = res.xpath('//div[@id="page"]/div/a[last()]/text()')
@@ -43,14 +45,14 @@ class BaiDu_Spider(object):
 
     def save_data(self, item):
         with open(crawl_result, 'a', encoding='utf-8')as f:
-            data = item['title'] + '\t' + item['link']
+            data = item['title'] + '\t' + item['source'] + '\t' + item['link']
             print(data)
             f.write(data + '\n')
 
 
 def main():
     n = 10
-    while True:
+    for i in range(5):
         data_list, flag = spider.get_html(n)
         for data in data_list:
             spider.save_data(data)
