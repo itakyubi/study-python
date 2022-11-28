@@ -1,0 +1,69 @@
+#----------- yolov3 -----------#
+channelOrder: "CHW"
+imageNormStd:
+  - 255.
+  - 255.
+  - 255.
+imageResize:
+  - 416
+  - 416
+imageResizePad: "padding"
+expandDim: 0
+modelType: "yolov3"
+#----------- yolov3 -----------#
+
+#----------- ssd -----------#
+#channelOrder: "CHW"
+#imageNorm: 255
+#imageNormMean:
+#  - 0.485
+#  - 0.456
+#  - 0.406
+#imageNormStd:
+#  - 0.229
+#  - 0.224
+#  - 0.225
+#imageResize:
+#  - 1200
+#  - 1200
+#expandDim: 0
+#modelType: "ssd"
+#----------- ssd -----------#
+
+#----------- ssd_mobile_net -----------#
+#expandDim: 0
+#imageDateType: uint8
+#modelType: "ssd_mobile_net"
+#----------- ssd_mobile_net -----------#
+
+#----------- rcnn -----------#
+#channelOrder: "CHW"
+#colorFormat: "BGR"
+#imageNormMean:
+#  - 102.9801
+#  - 115.9465
+#  - 122.7717
+#modelType: "rcnn"
+#----------- rcnn -----------#
+
+
+#----------- all config -----------#
+#channelOrder: "CHW"  #Channel、Height、Width分量的顺序
+#colorFormat: "RGB"   #RGB分量的顺序
+#imageNorm: 1.        # 归一化
+#imageNormMean:
+#  - 102.9801
+#  - 115.9465
+#  - 122.7717
+#imageNormStd:
+#  - 1
+#  - 1
+#  - 1
+#imageResize:        # 图片resize
+#  - 416
+#  - 416
+#imageResizePad: "padding"  # 图片是否需要空白填充
+#imageDateType: uint8       # 输入类型
+#expandDim: 0               # 输入扩充维度
+#modelType: "yolov3"        # 模型类型
+#----------- all config -----------#

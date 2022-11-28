@@ -1,0 +1,7 @@
+FROM ubuntu:18.04
+
+COPY runtime /etc/baetyl/ai-runtime
+COPY libonnxruntime_providers_shared.so /etc/baetyl/lib/libonnxruntime_providers_shared.so
+ENV LD_LIBRARY_PATH /etc/baetyl/lib
+WORKDIR /etc/baetyl
+ENTRYPOINT ["./ai-runtime"]
